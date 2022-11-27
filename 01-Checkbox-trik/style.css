@@ -8,3 +8,27 @@ body {
 }
 
 /* ------------------------------------- */
+/* It is better not to use display: none, because it can - sometimes - be completely removed from page.*/
+/* I also can use width: 0; height: 0, opacity: 0; and overflow: hidden; but then the place for checkbox is still visible in the page and 
+needs further styling.*/
+.check {
+	position: absolute;
+	left: -9999px;
+}
+
+label {
+	
+}
+
+.boxik {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	border: 2px solid blue;
+	background-color: yellow;
+	border-radius: 4px;
+}
+
+.check:checked + label {
+	color: red;
+}
